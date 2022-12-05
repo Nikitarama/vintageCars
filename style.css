@@ -64,7 +64,7 @@ body {
 }
 
 .container-fluid-heading {
-    margin-top: 10vh;
+    margin-top: 1vh;
 }
 
 .container-fluid-heading h1 {
@@ -81,8 +81,9 @@ body {
 
 .container h2 {
     margin-top: -60px;
+    margin-left: 100px;
     font-family: 'Alfa Slab One', cursive;
-    background-color: antiquewhite;
+    background-color: beige;
     box-shadow: 10px 10px 10px black;
     text-align: left;
 }
@@ -100,8 +101,9 @@ body {
 
 .cars {
     margin: 0;
+    margin-left: -200px;
     padding-top: 100px;
-    background-color: burlywood;
+    background-color: #DFC092;
     background-image:url('');
     background-size: contain;
 
@@ -116,11 +118,6 @@ body {
     background-color: #fff;
 }
 
-.card:hover {
-    box-shadow: 0px 0px 0px black;  
-    scale: 0.9.9;
-    border: 1px solid white;
-}
 
 .card-body button {
     background-color: burlywood;

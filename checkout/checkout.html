@@ -30,7 +30,7 @@
                                     shopping_basket
                                 </span>
                                 Cart 
-                                <span>0</span>
+                                <span><id="calDisplay">0</id></span>
                                 
                             </a>
                         
@@ -40,12 +40,78 @@
         </div>
     </header>
 
-    <ul>
-        <br>
+    <div class="cart">
 
+        <br>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="img">Item</th>
+                <th scope="col">Name</th>
+                <th scope="col">Year</th>
+                <th scope="col">Price</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><img src="../-Ferrari-250-GTO-1962-old-luxe-digital@2x.jpg.webp" style="width:140px; height:90px; border-radius: 20px;"></td>
+                <td>Ferrari 250 GTO</td>
+                <td>1962</td>
+                <td>R14 000 000</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><img src="../-Aston-Martin-DB5-1964-old-luxe-digital@2x.jpg.webp" style="width:140px; height:90px; border-radius: 20px;"></td>
+                <td>Aston-Martin-DB5</td>
+                <td>1964</td>
+                <td>R7 000 000</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td><img src="../-Oldsmobile-Starfire-Convertible-1962-old-luxe-digital@2x.jpg.webp" style="padding:0; width:140px; height:90px; border-radius: 20px;"></td>
+                <td>Oldsmobile-Starfire-Convertible</td>
+                <td>1962</td>
+                <td>R14 000 000</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td><img src="../merc gullwing.jpg" style="width:140px; height:90px; border-radius: 20px;"></td>
+                <td>Mercedes Benz Gullwing</td>
+                <td>1970</td>
+                <td>R17 000 000</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td><img src="../-Chevrolet-El-Camino-SS-1970-old-luxe-digital@2x.jpg" style="padding:0; width: 140px; height:90px; border-radius: 20px;"></td>
+                <td>Chevrolet-El-Camino-SS</td>
+                <td>1972</td>
+                <td>R2 000 000</td>
+                <td>0</td>
+                <tr>
+                    <th scope="row">6</th>
+                    <td><img src="../greatgasby car.jpg" style="width:140px; height:80px; border-radius: 20px;"></td>
+                    <td>Rolls Royce</td>
+                    <td>1970</td>
+                    <td>R20 000 000</td>
+                    <td>0</td>
+                </tr>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+          <!-- 
         <li>
             <img src="../-Aston-Martin-DB5-1964-old-luxe-digital@2x.jpg.webp" style="padding:0; width:140px; height:90px; border-radius: 20px;">
-            <p class="carName">Aston-Martin-DB5-1964</p>
+            <h5 class="carName">Aston-Martin-DB5-1964</h5>
+            <h5 class="carPrice">R7 000 000</h5>
         </li>
 
         <br>
@@ -54,7 +120,8 @@
 
         <li>
             <img src="../-Chevrolet-El-Camino-SS-1970-old-luxe-digital@2x.jpg" style="padding:0; width: 140px; height:90px; border-radius: 20px;">
-            <p class="carName"></p>
+            <h5 class="carName">Chevrolet-El-Camino-SS-1970</h5>
+            <h5 class="carPrice">R2 000 000</h5>
         </li>
         
         <br>
@@ -63,7 +130,8 @@
 
         <li>
             <img src="../-Ferrari-250-GTO-1962-old-luxe-digital@2x.jpg.webp" style="padding:0; width:140px; height:90px; border-radius: 20px;">
-            <p class="carName"></p>
+            <h5 class="carName">Ferrari-250-GTO-1962</h5>
+            <h5 class="carPrice">R12 000 000</h5>
         </li>
 
         <br>
@@ -72,7 +140,8 @@
 
         <li>
             <img src="../-Oldsmobile-Starfire-Convertible-1962-old-luxe-digital@2x.jpg.webp" style="padding:0; width:140px; height:90px; border-radius: 20px;">
-            <p class="carName"></p>
+            <h5 class="carName">Oldsmobile-Starfire-Convertible-1962</h5>
+            <h5 class="carPrice">R16 000 000</h5>
         </li>
 
         <br>
@@ -81,7 +150,8 @@
 
         <li>
             <img src="../merc gullwing.jpg" style="width:140px; height:90px; border-radius: 20px;">
-            <p class="carName"></p>
+            <h5 class="carName">Mercedes Benz Gullwing</h5>
+            <h5 class="carPrice">R14 000 000</h5>
         </li>
         
         <br>
@@ -90,12 +160,13 @@
         
         <li>
             <img src="../greatgasby car.jpg" style="width:140px; height:80px; border-radius: 20px;">
-            <p class="carName">Mercedes Benz Gullwing</p>
+            <h5 class="carName">Rolls Royce 1962</h5>
+            <h5 class="carPrice">R20 000 000</h5>
         </li>
         
         <br>
         <hr>
-    </ul>
+    </ul> -->
     
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script src="../script.js"></script>
