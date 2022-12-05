@@ -1,0 +1,202 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: bisque;
+    font-family: 'Alfa Slab One', cursive;
+    
+}
+
+.topsec {
+    margin:0;
+    background-image: url('./suburbs.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 170vh;
+    width:100%;
+    background-color: burlywood;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.navbar-brand {
+    color:#fff;
+    margin-left: 20%;
+}
+
+.card p {
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.submitionForm {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    width:80%;
+    height:500px;
+    padding-left: 200px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: right;
+    margin-top: 40px;
+}
+
+.navbar {
+    height: 71px;
+    background-color: rgb(0, 0, 0,);
+    color:antiquewhite;
+}
+
+.container-fluid  {
+
+    margin-top: 0px;
+    width:100%;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.container-fluid-heading {
+    margin-top: 10vh;
+}
+
+.container-fluid-heading h1 {
+    color:antiquewhite;
+    text-shadow: 2px 2px 0px black;
+}
+
+.container-fluid-heading h4 {
+    color: black;
+    text-shadow: 1px 1px 0px white;
+    font-size: 25px;
+    margin-top: 60px;
+}
+
+.container h2 {
+    margin-top: -60px;
+    font-family: 'Alfa Slab One', cursive;
+    background-color: antiquewhite;
+    box-shadow: 10px 10px 10px black;
+    text-align: left;
+}
+
+.col-sm-12 img {
+    margin-left: 0px;
+    border: 12px solid sienna;
+    box-shadow: 2px 2px 5px black;
+}
+
+.col-sm-12 {
+    margin-top: 100px;
+    
+}
+
+.cars {
+    margin: 0;
+    padding-top: 100px;
+    background-color: burlywood;
+    background-image:url('');
+    background-size: contain;
+
+}
+
+.card {
+    margin-left:100px;
+    margin-bottom: 70px;
+    box-shadow: 10px 10px 10px black;
+    border: 2px solid black;
+    text-align: left;
+    background-color: #fff;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 0px black;  
+    scale: 0.9.9;
+    border: 1px solid white;
+}
+
+.card-body button {
+    background-color: burlywood;
+    border-radius: 100px;
+    border: 1px solid burlywood;
+    width: 100px;
+    color: beige;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 5px black;
+    
+}
+
+.card button:hover {
+    background-color: springgreen;
+    color:white;
+    border: 1px solid springgreen;
+    box-shadow: 0px 0px 0px black;
+}
+
+.social-icons {
+    margin-bottom: 40px;
+    background-color: bisque;
+    background-image: url('./beachvintagecar.gif');
+    background-position: center;
+    background-size: cover;
+}
+
+.icons p {
+    color:#fff;
+    letter-spacing: 0px;
+    font-size: 15px;
+}
+
+.icons a {
+    color: #fff;
+    line-height: 5px;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+a:hover i {
+    color: #fff;
+    transform: scale(1.4);
+    color: burlywood;
+}
+
+.footer .footer-cols {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2rem;
+}
+
+.footer-cols a {
+    text-decoration: none;
+    color:antiquewhite; 
+}
+
+    
+.footer li {
+    line-height: 1.9;
+    list-style: none;
+        
+}
+
+.footer-cols:hover a {
+    
+}
+
+.footer {
+    font-family:'Times New Roman', Times, serif;
+    background-color: bisque;
+    background-image: url('./suburbs.jpg');
+    background-position: center;
+    background-size: cover;
+    
+}
+
