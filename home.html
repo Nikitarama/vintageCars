@@ -23,8 +23,8 @@
                         shopping_basket
                     </span>
                     Cart 
-                    <span>0</span>
-                    
+                    <span id="scrDisplay" class="scrDisplay">0</span>
+                    <div id="calDisplay" active=hidden class="calDisplay"></div>
                 </a>
             
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
@@ -74,7 +74,7 @@
             <h4>We have the world's finest limited edition vintage classics!!</h4>
             
             <div class="col-sm-12">
-                <img src="./beachvintagecar.gif" style="width:200px; height:200px; border-radius: 50px;">
+                <img src="./beachvintagecar.gif" style="width:300px; height:250px; border-radius: 50px;">
             </div>
         </div>
     </section>
@@ -121,76 +121,68 @@
             <h2>Browse our vintage collection</h2>
             <br>
             <div class="row">
-                <div class="col-sm-5 col-md-6">
+                <div class="col-sm-5 col-md-4">
                     <div class="card" onclick="" style="width: 18rem;">
                         <img src="./-Aston-Martin-DB5-1964-old-luxe-digital@2x.jpg.webp" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="carName">Aston Martin DB5 1964</p>
                                 <p class="carPrice">R6 999 000</p>
-                                <button>purchase</button>
+                                <button id="display('2000000')" class="addToCart">Purchase</button>
                             </div>
                     </div>
                 </div>
                 
-                <div class="col-sm-5 col-md-6">
+                <div class="col-sm-5 col-md-4">
                     <div class="card" onclick="" style="width: 18rem;">
                         <img src="./-Chevrolet-El-Camino-SS-1970-old-luxe-digital@2x.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="carName">Chevrolet El Camino SS 1970</p>
                                 <p class="carPrice">R2 000 000</p>
-                                <button>purchase</button>
+                                <button id="display('2000000')" class="addToCart">Purchase</button>
                             </div>
                     </div>
                 </div>
-            </div>
+        
 
-            <br>
-            <br>
-
-            <div class="row">
-                <div class="col-sm-5 col-md-6">
+                <div class="col-sm-5 col-md-4">
                     <div class="card" onclick="" style="width: 18rem;">
                         <img src="./-Ferrari-250-GTO-1962-old-luxe-digital@2x.jpg.webp" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="carName">Ferrari 250 GTO 1962</p>
-                                <p class="carPrice">R14 000 000</p>
-                                <button>purchase</button>
-                            </div>
+                        <div class="card-body">
+                            <p class="carName">Ferrari 250 GTO 1962</p>
+                            <p class="carPrice">R14 000 000</p>
+                            <button id="display('2000000')" class="addToCart">Purchase</button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-5 col-md-6">
+            <div class="row">
+                <div class="col-sm-5 col-md-4">
                     <div class="card" onclick="" style="width: 18rem;">
                         <img src="./-Oldsmobile-Starfire-Convertible-1962-old-luxe-digital@2x.jpg.webp" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="carName">Oldmobile Starfire Convertible 1962</p>
                                 <p class="carPrice">R10 000 000</p>
-                                <button>purchase</button>
+                                <button id="display('2000000')" class="addToCart">Purchase</button>
                             </div>
                     </div>
                 </div>
-            </div>
-
-            <br>
-            <br>
-
-            <div class="row">
-                <div class="col-sm-5 col-md-6">
+            
+                <div class="col-sm-5 col-md-4">
                     <div class="card" onclick="" style="width: 18rem;">
                         <img src="./merc gullwing.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="carName">Mercedez Benz Gullwing 1962</p>
                                 <p class="carPrice">R20 000 000</p>
-                                <button>purchase</button>
+                                <button id="display('2000000')" class="addToCart">Purchase</button>
                             </div>
                     </div>
                 </div>
-                <div class="col-sm-5 col-md-6">
+                <div class="col-sm-5 col-md-4">
                     <div class="card" onclick="" style="width: 18rem;">
                         <img src="./greatgasby car.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="carName">Oldmobile Starfire Convertible 1962</p>
                                 <p class="carPrice">R16 000 000</p>
-                                <button>purchase</button>
+                                <button id="display('2000000')" class="addToCart">Purchase</button>
                             </div>
                     </div>
                 </div>

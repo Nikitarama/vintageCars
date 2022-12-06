@@ -1,0 +1,39 @@
+
+[ 
+    {
+        "name": "Ferrari 250 GTO",
+        "year": "1962", 
+        "price": 14000000,
+        "amount": 0
+    },
+    {
+        "name":"Ferrari 250 GTO",
+        "year": "1962", 
+        "price": 14000000,
+        "amount": 0
+    },
+    {
+        "name": "Ferrari 250 GTO",
+        "year":"1962", 
+        "price": 14000000,
+        "amount": 0
+    },
+    {
+        "name": "Ferrari 250 GTO",
+        "year": "1962", 
+        "price": 14000000,
+        "amount": 0
+    },
+    {
+        "name": "Ferrari 250 GTO",
+        "year": "1962", 
+        "price": 14000000,
+        "amount": 0
+    },
+    {
+        "name": "Ferrari 250 GTO",
+        "year": "1962", 
+        "price": 14000000,
+        "amount": 0
+    }
+]
