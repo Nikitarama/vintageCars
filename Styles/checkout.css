@@ -14,7 +14,7 @@ body {
 .checkout-head {
     margin-top: 0px;
     padding: 0;
-    background-image: url(../tropiccars.jpg);
+    background-image: url(/Assets/tropiccars.jpg);
     width: 100%;
     background-position-x: left;
     background-size: cover;
@@ -48,20 +48,7 @@ body {
     text-decoration: none;
     color:antiquewhite;
     text-shadow: 2px 0 0 black;
-}.checkout-head {
-    margin-top: 0px;
-    padding: 0;
-    background-image: url(../tropiccars.jpg
-    );
-    width: 100%;
-    background-position-x: left;
-    background-size: cover;
-    height:250px;
-    color: antiquewhite;
-    font-family: 'Alfa Slab One', cursive;
-    
 }
-
 .checkout-head h1 {
     margin-top: 0px;
     box-shadow: 0px 0 20px black;
