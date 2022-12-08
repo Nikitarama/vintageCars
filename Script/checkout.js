@@ -14,24 +14,24 @@ fetch('/data/data.json')
 })
 .then((data) => {
     
-    let tbody = document.querySelector('tbody');
+let tbody = document.querySelector('tbody');
 
     for (const car of data) {
-        console.log(car);
-        Object.keys(car).forEach((item) => {
+        console.log(item);
+        Object.keys(data).forEach((item) => {
           return document.querySelector('tbody');
             tbody.innerHTML(item + ': ' + car[item]);
         })
-    }
+};
 
-    Object.keys(data).forEach((item) => {
+Object.keys(data).forEach((item) => {
         // console.log(item);
-        // console.log(item);
-        if(data[item].amount == 0) {
+  console.log(item);
+        if(data[item].type == "vintage") {
             tbody.innerHTML +=
             `
             <tr>
-            <th>${data[item]}</th>
+            <th>${[item]}</th>
             <td>${data[item].image}</td>
             <td>${data[item].name}</td>
             <td>${data[item].year}</td>
@@ -42,7 +42,30 @@ fetch('/data/data.json')
             `
         }
     })
-})
+});
+
+// let cart = document.querySelectorAll('addToCart');
+
+// for(let i=0; i < cart.length; i++) {
+//     cart[i].addEventListener('click', () => {
+//         console.log(amount[i]);
+//     })
+// }
+
+// function amount(); 
+
+// let productNumbers = local.Storage.getItem('amount');
+//     console.log(productNumbers);
+//     localStorage.setItem('amount', 1);
+// }
+    
+//     productNumbers = parseInt(productNumbers);
+
+//     if(productNumbers) {
+//         localStorage.setItem('amount', productNumbers + 1);
+//         }else {
+//             localStorage.setItem('amount', 1);
+//         }
 
 // let carts = document.querySelectorAll('addToCart');
 

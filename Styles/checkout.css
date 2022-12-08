@@ -67,6 +67,7 @@ body {
     justify-content: space-between;
     padding: 50px 60px 0 60px;
     letter-spacing: 1px;
+    margin-right: 10rem;
 }
 
 .nav a {

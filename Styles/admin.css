@@ -1,20 +1,61 @@
-.list {
+
+.admin {
     display: flex;
     justify-content: center;
     background-image: url();
     height: 10rem;
-    color:aquamarine;
-    
+    /* color:aquamarine; */
 }
 
-.information {
+.adminHead h1 {
+    /* color:aquamarine; */
+    justify-content: center;
+    font-family: ;
+}
+
+/* .information {
     background-image: url(../Assets/juan-pablo-melo-m_gsmHeE4Qk-unsplash.jpg);
     background-size: cover;
     background-position: center;
 }
+body {
+    font-family: sans-serif;
+    margin: 0 50px;
+    /* background-image: url(../Assets/juan-pablo-melo-m_gsmHeE4Qk-unsplash.jpg); */
+    /* background-position: center;
+    background-size: cover;
+}
+  
+.container {
+    display: flex;
+    gap: 50px;
+}
+  
+#posts {
+    width: 500px;
+}
+  
+i {
+    cursor: pointer;
+}
+
+#posts div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.options {
+    display: flex;
+    gap: 25px;
+}
+  
+#msg {
+    color: red;
+} */ 
 
 .table th {
-    color:antiquewhite;
+    color:black;
 }
 
 .table-list {
@@ -23,14 +64,14 @@
 }
 
 th {
-    border: 1px solid white;
+    border: 1px solid grey;
     text-align: left;
     padding: 8px 15px;
 
 }
 
 tr:nth-child(even), table-list thread> tr{
-    background: white;
+    background: grey;
 }
 
 input[type="text"], input[type="number"]{
@@ -38,7 +79,7 @@ input[type="text"], input[type="number"]{
     padding: 12px;
     margin: 8px;
     display: inline-block;
-    border: 1px solid white;
+    border: 1px solid grey;
     border-radius:  30px;
     font-size: 1rem;
     cursor: pointer;
