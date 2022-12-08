@@ -1,4 +1,4 @@
-fetch("../data/data.json")
+fetch("/data/data.json")
 .then ((store) => {
     return store.json()
 })
@@ -7,7 +7,7 @@ fetch("../data/data.json")
 //    console.table(results) 
 // }) 
 .then((data) => {
-    let myCars = document.querySelector('#myCars');
+    let myCars = document.querySelectorAll('#myCars');
     Object.keys(data).forEach((item) => {
         console.log(data[item].image);
         if(data[item] && data[item].type == "vintage") {
@@ -19,22 +19,38 @@ fetch("../data/data.json")
                             <div class="card-body">
                                 <p class="carName">${data[item].name}</p>
                                 <p class="carPrice">${data[item].price}</p>
-                                <button class="addToCart">Purchase</button>
+                                <button class="addToCart" href="#">Purchase</button>
                             </div>
-                            </div>
+                    </div>
+            </div>
                            
                     
             `
         }
     })
-})
+});
 
-// const filter = [carPrice];
+function display ( array = []) {
+    cars.innerHTML = "";
 
-// points.sort(function(a, b);
+    for (let i = 0; i < array.length; i++) {
+        let item = array[i];
 
-// {return b - a});
+    }
+}
+display(item.price);
 
+
+
+// const filter = [price];
+
+// price.sort(lowest);
+    
+//     console.log(filter);
+
+// function lowest(a, b); {
+//     return a - b
+// }
 
 
 // fetch('../data/data.json')
@@ -70,11 +86,18 @@ fetch("../data/data.json")
 //         carNumbers();
 //     })
 // }
+let cart = document.querySelectorAll('addToCart');
 
+for(let i=0; i < cart.length; i++) {
+    cart[i].addEventListener('click', () => {
+        console.log(carNumber);
+    })
+}
 
-// function carNumbers() {
-//     let productNumbers = local.Storage.getItem('carNumbers');
-//     // console.log(productNumbers);
+function carNumber(); 
+// {
+    let productNumbers = local.Storage.getItem('carNumbers');
+//     console.log(productNumbers);
 //     localStorage.setItem('carNumbers', 1);
 // }
     
@@ -85,9 +108,9 @@ fetch("../data/data.json")
 //         }else {
 //             localStorage.setItem('carNumbers', 1);
 //         }
-//     }
+    
 
 //     console.log(productNumbers);
 
-//     localStorage.setItem('carNumbers', 1);
+// //     localStorage.setItem('carNumbers', 1);
 // }

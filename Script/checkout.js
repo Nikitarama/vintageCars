@@ -7,7 +7,8 @@
 //    console.table(results) 
 // }) 
 
-fetch('../data/data.json')
+fetch('/data/data.json')
+
 .then((store) => {
     return store.json();
 })
@@ -15,27 +16,42 @@ fetch('../data/data.json')
     
     let tbody = document.querySelector('tbody');
 
-    for (const kar of data) {
-        // console.log(kar);
-        Object.keys(kar).forEach((item) => {
-            // console.log(item + ': ' + kar[item]);
+    for (const car of data) {
+        console.log(car);
+        Object.keys(car).forEach((item) => {
+          return document.querySelector('tbody');
+            tbody.innerHTML(item + ': ' + car[item]);
         })
     }
 
     Object.keys(data).forEach((item) => {
         // console.log(item);
         // console.log(item);
-        if(data[item] == "vintage") {
+        if(data[item].amount == 0) {
             tbody.innerHTML +=
             `
             <tr>
-            <td>${data[item]}</td>
+            <th>${data[item]}</th>
+            <td>${data[item].image}</td>
+            <td>${data[item].name}</td>
+            <td>${data[item].year}</td>
+            <td>${data[item].price}</td>
+            <td>${data[item].amount}</td>
            
             </tr>
             `
         }
     })
-});
+})
+
+// let carts = document.querySelectorAll('addToCart');
+
+// for(let i=0; i < cart.length; i++) {
+//     cart[i].addEventListener('click', () => {
+//         console.log(cart);
+//     })
+// }
+
 
 /* <tbody>
               <tr>

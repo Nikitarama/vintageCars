@@ -1,51 +1,51 @@
 
 [ 
     {
-        "name": "Ferrari 250 GTO",
-        "year": "1970", 
-        "price": 20000000,
+        "name": "Aston Martin DB5",
+        "year": "1964", 
+        "price": 70000000,
         "type": "vintage",
         "image": "https://i.postimg.cc/KYFwCXcq/Aston-Martin-DB5-1964-old-luxe-digital-2x-jpg.webp",
         "amount": 0
     },
     {
-        "name":"Ryan 250 GTO",
-        "year": "1967", 
-        "price": 17000000,
+        "name":"Chevrolet El Camino SS 250 GTO",
+        "year": "1970", 
+        "price": 2000000,
         "type": "vintage",
-        "image": "",
+        "image": "https://i.postimg.cc/wv0yMj1P/Chevrolet-El-Camino-SS-1970-old-luxe-digital-2x.jpg",
         "amount": 0
     },
     {
-        "name": "Nikita 250 GTO",
+        "name": "Ferrari 250 GTO",
         "year":"1962", 
         "price": 14000000,
         "type": "vintage",
-        "image": "",
+        "image": "https://i.postimg.cc/JrZWL2fN/Ferrari-250-GTO-1962-old-luxe-digital-2x-jpg.webp",
         "amount": 0
     },
     {
-        "name": "Jamie 250 GTO",
+        "name": "Oldsmobile Starfire Convertible",
         "year": "1962", 
         "price": 12000000,
         "type": "vintage",
-        "image": "",
+        "image": "https://i.postimg.cc/SxgcjdHV/Oldsmobile-Starfire-Convertible-1962-old-luxe-digital-2x-jpg.webp",
         "amount": 0
     },
     {
-        "name": "Ferrari 250 GTO",
-        "year": "1962", 
-        "price": 7000000,
+        "name": "Mercedes Benz Gullwing",
+        "year": "1970", 
+        "price": 17000000,
         "type": "vintage",
-        "image": "",
+        "image": "https://i.postimg.cc/pX4HxMLB/merc-gullwing.jpg",
         "amount": 0
     },
     {
-        "name": "Ferrari 250 GTO",
-        "year": "1962", 
-        "price": 2000000,
+        "name": "Rolls Royce",
+        "year": "1960", 
+        "price": 20000000,
         "type": "vintage",
-        "image": "",
+        "image": "https://i.postimg.cc/2yL07MNz/greatgasby-car.jpg",
         "amount": 0
     }
 ]
