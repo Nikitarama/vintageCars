@@ -13,18 +13,67 @@
 </head>
 <body>
     <header class="adminHead">
-        <h1>Admin</h1>
-       
-<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Create a product
-</button>
-
+        
+        <ul>
+            <nav class="navbar navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+                    <img src="/Assets/classic-car-summer-beach_27668-278.webp" style="width:90px; height:72px; border-radius: 50px; margin-top:-10px;">
+                    <a class="navbar-brand" href="#">ADMIN: Vintage Cars District©</a>
+                    
+                    <a href="/HTML/checkout.html">
+                                <span class="material-symbols-outlined">
+                                    shopping_basket
+                                </span>
+                                Cart 
+                                <span>0</span>
+                                <div active=hidden ></div>
+                            </a>
+                            
+                          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+            
+                          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                            <div class="offcanvas-header">
+                              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">VCD©</h5>
+                              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                  <a class="nav-link active" aria-current="page" href="#">Admin</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/home.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/HTML/checkout.html">Cart</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex mt-3" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>   
+        </ul>
+        
+    </header>
+    
+    <div class="button">
+        
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+     Create a product
+    </button>
+</div>
 
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a product</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -46,6 +95,7 @@
                     <label for="amount">Amount</label>
                     <input type="number" id="amount">
                 </div>
+                <br>
         
                 <div class="form-action">
                     <input type="submit" onsubmit="onFormSubmit()" value="Submit">
@@ -59,7 +109,7 @@
     </div>
   </div>
 </div>
-    </header>
+    
 
     <!-- <h1>Social Media App</h1>
     <section class="CRUD"> -->
@@ -181,7 +231,6 @@
                      <th>Name</th>
                     <th>Year</th>
                     <th>Price</th>
-                    <th>Amount</th>
                     <th>Action</th> 
                     </tr> 
             </thead>

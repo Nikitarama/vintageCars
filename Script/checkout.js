@@ -1,3 +1,26 @@
+let checkout = JSON.parse(localStorage.getItem('myCheckout'));
+
+console.log(checkout)
+
+let tbody = document.querySelector('tbody')
+
+Object.keys(checkout).forEach((item) => {
+  if(checkout[item]){
+    tbody.innerHTML +=
+    `
+    <tr>
+    <th>${parseInt([item]) + 1}</th>
+    <td><img src='${checkout[item].image}' style='width: 200px; height: '250px''></td>
+    <td>${checkout[item].name}</td>
+    <td>${checkout[item].year}</td>
+    <td>${checkout[item].price}</td>
+    <td>${checkout[item].amount}</td>
+   
+    </tr>
+    `
+  }
+})
+
 // fetch("../data/data.json")
 // .then ((store) => {
 //     return store.json()
@@ -7,50 +30,50 @@
 //    console.table(results) 
 // }) 
 
-fetch('/data/data.json')
+// fetch('/data/data.json')
 
 // .then((store) => {
 //     return store.json();
 // })
-.then((data) => {
+// .then((data) => {
     
-let tbody = document.querySelector('tbody');
+// let tbody = document.querySelector('tbody');
 
-    for (const car of data) {
-        console.log(item);
-        Object.keys(data).forEach((item) => {
-          return document.querySelector('tbody');
-            tbody.innerHTML(item + ': ' + car[item]);
-        })
-};
+//     for (const car of data) {
+//         console.log(item);
+//         Object.keys(data).forEach((item) => {
+//           return document.querySelector('tbody');
+//             tbody.innerHTML(item + ': ' + car[item]);
+//         })
+// };
 
-Object.keys(data).forEach((item) => {
+// Object.keys(data).forEach((item) => {
         
-  console.log(item);
-        if(data[item].type == "vintage") {
-            tbody.innerHTML +=
-            `
-            <tr>
-            <th>${[item]}</th>
-            <td>${data[item].image}</td>
-            <td>${data[item].name}</td>
-            <td>${data[item].year}</td>
-            <td>${data[item].price}</td>
-            <td>${data[item].amount}</td>
+//   console.log(item);
+//         if(data[item].amount == 0 ) {
+//             tbody.innerHTML +=
+//             `
+//             <tr>
+//             <th>${[item]}</th>
+//             <td>${data[item].image}</td>
+//             <td>${data[item].name}</td>
+//             <td>${data[item].year}</td>
+//             <td>${data[item].price}</td>
+//             <td>${data[item].amount}</td>
            
-            </tr>
-            `
-        }
-    })
-});
+//             </tr>
+//             `
+//         }
+//     })
+// });
 
-let cart = document.querySelectorAll('addToCart');
+// let cart = document.querySelectorAll('addToCart');
 
-for(let i=0; i < cart.length; i++) {
-    cart[i].addEventListener('click', () => {
-        console.log(cart);
-    })
-}
+// for(let i=0; i < cart.length; i++) {
+//     cart[i].addEventListener('click', () => {
+//         console.log(cart);
+//     })
+// }
 
 // function amount(); 
 

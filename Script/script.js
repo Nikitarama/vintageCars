@@ -53,26 +53,25 @@ localStorage.setItem('cars', JSON.stringify([
         "amount": 0
     }
 ]));
+
+let checkout = [];
+localStorage.setItem('myCheckout', JSON.stringify(checkout))
 //parse into localStorage
-let i = JSON.parse(localStorage.getItem('cars'));
-console.log(i)
+let allCars = JSON.parse(localStorage.getItem('cars'));
 
-Object.keys(i).forEach(index => {
+Object.keys(allCars).forEach((carKey) => {
 //show names of cars in console
-    console.log(i[index].name);
-});
-
-let myCar = document.querySelector(".myCars");
-
-if(data[item].type == "vintage") {
+    let w = allCars[carKey];
+    let myCar = document.querySelector("#myCars");
+    console.log(allCars[carKey].type);
     myCar.innerHTML +=
                 `
                     <div class="col-md-4">
                         <div class="card" style="width: 18rem;">
-                            <img src=${data[item].image} class="card-img-top" alt="...">
+                            <img src=${w.image} class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <p class="carName">${data[item].name}</p>
-                                    <p class="carPrice">${data[item].price}</p>
+                                    <p class="carName">${w.name}</p>
+                                    <p class="carPrice">${w.price}</p>
                                     <button class="addToCart" href="#">Purchase</button>
                                 </div>
                         </div>
@@ -80,7 +79,66 @@ if(data[item].type == "vintage") {
                                
                         
                 `
-};
+})
+
+let addBtn = document.querySelectorAll('.addToCart');
+
+Object.keys(addBtn).forEach((item) => {
+        addBtn[item].addEventListener('click', (e) => {
+            console.log('clicked', addBtn[item])
+            console.log(allCars[item])
+            checkout.push(allCars[item]);
+            console.log(checkout)
+            localStorage.setItem('myCheckout', JSON.stringify(checkout));
+        })
+    }
+)
+
+// function lowest()
+// Object.keys(allCars).forEach((carKey) => {
+//         console.log(allCars[carKey].item);
+
+//         if(data[item] && data[item].price >= 10000000 ) {
+//                 myCar.innerHTML +=
+//                         `
+//                             <div class="col-md-4">
+//                                 <div class="card" style="width: 18rem;">
+//                                     <img src=${item.image} class="card-img-top" alt="...">
+//                                         <div class="card-body">
+//                                             <p class="carName">${item.name}</p>
+//                                             <p class="carPrice">${item.price}</p>
+//                                             <button class="addToCart" href="#">Purchase</button>
+//                                         </div>
+//                                 </div>
+//                             </div>
+                                       
+                                
+//                         `
+//                     }
+
+
+// Object.keys(data).forEach((item) => {
+//     let data = 
+// }
+
+
+// if(data[item].type == "vintage") {
+//     myCar.innerHTML +=
+//                 `
+//                     <div class="col-md-4">
+//                         <div class="card" style="width: 18rem;">
+//                             <img src=${data[item].image} class="card-img-top" alt="...">
+//                                 <div class="card-body">
+//                                     <p class="carName">${data[item].name}</p>
+//                                     <p class="carPrice">${data[item].price}</p>
+//                                     <button class="addToCart" href="#">Purchase</button>
+//                                 </div>
+//                         </div>
+//                     </div>
+                               
+                        
+//                 `
+// };
 
 
     
@@ -149,15 +207,15 @@ if(data[item].type == "vintage") {
 
 
 
-const filter = [cars.price];
+// const filter = [cars.price];
 
-price.sort(lowest());
+// price.sort(lowest());
     
-    console.log(filter);
+//     console.log(filter);
 
-function lowest(a, b) {
-    return a - b
-}
+// function lowest(a, b) {
+//     return a - b
+// }
 
 
 // fetch('../data/data.json')

@@ -1,3 +1,21 @@
+let w = JSON.parse(localStorage.getItem('cars'));
+console.log(w);
+
+Object.keys(w).forEach((wIndex) => {
+    let p = w[wIndex];
+    let m = document.querySelector('tbody');
+    m.innerHTML += `
+        <tr>
+            <td>${p.name}</td>
+            <td>${p.year}</td>
+            <td>${p.price}</td>
+            <td><button class="addToCart" onclick="href="#">Delete</button></td>
+        </tr>
+    `
+
+})
+
+
 // var selectedRow = null
 
 // function onFormSubmit() {
@@ -94,14 +112,14 @@
 // };
 
 // {
-//     function readFormData() 
-//         var formData = {};
-//     formData["Car"] = document.getElementById("Car").value;
-//     formData["year"] = document.getElementById("year").value;
-//     formData["price"] = document.getElementById("price").value;
-//     formData["amount"] = document.getElementById("amount").value;
-//     formData["action"] = document.getElementById("action").value;
-//     return formData;
+    // function readFormData() 
+    //     var formData = {};
+    // formData["Car"] = document.getElementById("Car").value;
+    // formData["year"] = document.getElementById("year").value;
+    // formData["price"] = document.getElementById("price").value;
+    // formData["amount"] = document.getElementById("amount").value;
+    // formData["action"] = document.getElementById("action").value;
+    // return formData;
 
 // }
 
@@ -165,93 +183,93 @@
 // });
 
 // function onFormSubmit() {
-    //     var formData = readFormData();
+//         var formData = readFormData();
 //     insertNewRecord(formData);
-    // if (validate()) {
-    //     var formData = readFormData();
-    //     if (selectedRow == null)
-    //         insertNewRecord(formData);
-    // }else{
-        //         updateRecord(formData);
-        //     resetForm();
-        // }
+//     if (validate()) {
+//         var formData = readFormData();
+//         if (selectedRow == null)
+//             insertNewRecord(formData);
+//     }else{
+//                 updateRecord(formData);
+//             resetForm();
+//         }
         
-        var selectedRow = null
+//         var selectedRow = null
         
-function onFormSubmit() {
-        var formData = readFormData();
-        insertNewRecord(formData);
-        console.log('hello');
-};
+// function onFormSubmit() {
+//         var formData = readFormData();
+//         insertNewRecord(formData);
+//         console.log('hello');
+// };
 
-function readFormData() {
-    var formData = {};
-    formData["car"] = document.getElementById("car").value;
-    formData["year"] = document.getElementById("year").value;
-    formData["price"] = document.getElementById("price").value;
-    formData["amount"] = document.getElementById("amount").value;
-    return formData;
-};
-function insertNewRecord(data) {
-    var table = document.getElementById("adminList").getElementsByTagName('tbody')[0];
-    var newRow = table.insertRow(table.length); //will insert new item on a new row from 0
+// function readFormData() {
+//     var formData = {};
+//     formData["car"] = document.getElementById("car").value;
+//     formData["year"] = document.getElementById("year").value;
+//     formData["price"] = document.getElementById("price").value;
+//     formData["amount"] = document.getElementById("amount").value;
+//     return formData;
+// };
+// function insertNewRecord(data) {
+//     var table = document.getElementById("adminList").getElementsByTagName('tbody')[0];
+//     var newRow = table.insertRow(table.length); //will insert new item on a new row from 0
     
-    cell1 = newRow.insertCell(0);
-    cell1.innerHTML = data.car;
+//     cell1 = newRow.insertCell(0);
+//     cell1.innerHTML = data.car;
     
-    cell2 = newRow.insertCell(1);
-    cell2.innerHTML = data.year;
+//     cell2 = newRow.insertCell(1);
+//     cell2.innerHTML = data.year;
     
-    cell3 = newRow.insertCell(2);
-    cell3.innerHTML = data.price;
+//     cell3 = newRow.insertCell(2);
+//     cell3.innerHTML = data.price;
     
-    cell4 = newRow.insertCell(3);
-    cell4.innerHTML = data.amount;
+//     cell4 = newRow.insertCell(3);
+//     cell4.innerHTML = data.amount;
     
-    cell4 = newRow.insertCell(4);
-    cell4.innerHTML = `<button onclick="onEdit(this)" class="btn btn-primary">Edit</button>
-                       <button onclick="onDelete(this)" class="btn btn-danger">Delete</a>`;
-};
-function resetForm() {
-    document.getElementById("car").value = "";
-    document.getElementById("year").value = "";
-    document.getElementById("price").value = "";
-    document.getElementById("amount").value = "";
-    selectedRow = null;
-};
+//     cell4 = newRow.insertCell(4);
+//     cell4.innerHTML = `<button onclick="onEdit(this)" class="btn btn-primary">Edit</button>
+//                        <button onclick="onDelete(this)" class="btn btn-danger">Delete</a>`;
+// };
+// function resetForm() {
+//     document.getElementById("car").value = "";
+//     document.getElementById("year").value = "";
+//     document.getElementById("price").value = "";
+//     document.getElementById("amount").value = "";
+//     selectedRow = null;
+// };
 
-function onEdit(formData) {
-    selectedRow = td.parentElement.parentElement;
-    document.getElementById("car").value = selectedRow.cells[0].innerHTML;
-    document.getElementById("year").value = selectedRow.cells[1].innerHTML;
-    document.getElementById("price").value = selectedRow.cells[2].innerHTML;
-    document.getElementById("amount").value = selectedRow.cells[3].innerHTML;
-};
+// function onEdit(formData) {
+//     selectedRow = td.parentElement.parentElement;
+//     document.getElementById("car").value = selectedRow.cells[0].innerHTML;
+//     document.getElementById("year").value = selectedRow.cells[1].innerHTML;
+//     document.getElementById("price").value = selectedRow.cells[2].innerHTML;
+//     document.getElementById("amount").value = selectedRow.cells[3].innerHTML;
+// };
 
-function updateRecord(formData) {
-    selectedRow.cells[0].innerHTML = formData.car;
-    selectedRow.cells[1].innerHTML = formData.year;
-    selectedRow.cells[2].innerHTML = formData.price;
-    selectedRow.cells[3].innerHTML = formData.amount;
-};
+// function updateRecord(formData) {
+//     selectedRow.cells[0].innerHTML = formData.car;
+//     selectedRow.cells[1].innerHTML = formData.year;
+//     selectedRow.cells[2].innerHTML = formData.price;
+//     selectedRow.cells[3].innerHTML = formData.amount;
+// };
 
-function onDelete(formData) {
-    if (confirm('You are about to delete an item.')) {
-        row = td.parentElement.parentElement;
-        document.getElementById("adminList").deleteRow(row.rowIndex);
-        resetForm();
-    }
-}
+// function onDelete(formData) {
+//     if (confirm('You are about to delete an item.')) {
+//         row = td.parentElement.parentElement;
+//         document.getElementById("adminList").deleteRow(row.rowIndex);
+//         resetForm();
+//     }
+// }
 
-function validate() {
-    isValid = true;
-    if (document.getElementById("car").value == "") {
-        isValid = false;
-        document.getElementById("adminList").classList.remove("hide");
-    } else {
-        isValid = true;
-        if (document.getElementById("adminList").classList.contains("hide"))
-            document.getElementById("adminList").classList.add("hide");
-    }
-    return isValid;
-}
+// function validate() {
+//     isValid = true;
+//     if (document.getElementById("car").value == "") {
+//         isValid = false;
+//         document.getElementById("adminList").classList.remove("hide");
+//     } else {
+//         isValid = true;
+//         if (document.getElementById("adminList").classList.contains("hide"))
+//             document.getElementById("adminList").classList.add("hide");
+//     }
+//     return isValid;
+// }
