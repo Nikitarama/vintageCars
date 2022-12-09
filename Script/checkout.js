@@ -9,9 +9,9 @@
 
 fetch('/data/data.json')
 
-.then((store) => {
-    return store.json();
-})
+// .then((store) => {
+//     return store.json();
+// })
 .then((data) => {
     
 let tbody = document.querySelector('tbody');
@@ -25,7 +25,7 @@ let tbody = document.querySelector('tbody');
 };
 
 Object.keys(data).forEach((item) => {
-        // console.log(item);
+        
   console.log(item);
         if(data[item].type == "vintage") {
             tbody.innerHTML +=
@@ -44,13 +44,13 @@ Object.keys(data).forEach((item) => {
     })
 });
 
-// let cart = document.querySelectorAll('addToCart');
+let cart = document.querySelectorAll('addToCart');
 
-// for(let i=0; i < cart.length; i++) {
-//     cart[i].addEventListener('click', () => {
-//         console.log(amount[i]);
-//     })
-// }
+for(let i=0; i < cart.length; i++) {
+    cart[i].addEventListener('click', () => {
+        console.log(cart);
+    })
+}
 
 // function amount(); 
 

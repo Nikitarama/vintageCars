@@ -53,26 +53,26 @@ localStorage.setItem('cars', JSON.stringify([
         "amount": 0
     }
 ]));
+//parse into localStorage
+let i = JSON.parse(localStorage.getItem('cars'));
+console.log(i)
 
-let x = JSON.parse(localStorage.getItem('cars'));
-console.log(x)
-
-Object.keys(x).forEach(index => {
-
-    console.log(x[index].name);
+Object.keys(i).forEach(index => {
+//show names of cars in console
+    console.log(i[index].name);
 });
 
-let myCar = document.querySelector('.myCars');
+let myCar = document.querySelector(".myCars");
 
-if(data[item] && data[item].amount == "0") {
+if(data[item].type == "vintage") {
     myCar.innerHTML +=
                 `
                     <div class="col-md-4">
                         <div class="card" style="width: 18rem;">
-                            <img src=${item.image} class="card-img-top" alt="...">
+                            <img src=${data[item].image} class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <p class="carName">${item.name}</p>
-                                    <p class="carPrice">${item.price}</p>
+                                    <p class="carName">${data[item].name}</p>
+                                    <p class="carPrice">${data[item].price}</p>
                                     <button class="addToCart" href="#">Purchase</button>
                                 </div>
                         </div>
@@ -80,6 +80,13 @@ if(data[item] && data[item].amount == "0") {
                                
                         
                 `
+};
+
+
+    
+                
+
+
 // fetch("../data/data.json")
 // .then ((store) => {
 //     return store.json()
@@ -142,15 +149,15 @@ if(data[item] && data[item].amount == "0") {
 
 
 
-// const filter = [price];
+const filter = [cars.price];
 
-// price.sort(lowest);
+price.sort(lowest());
     
-//     console.log(filter);
+    console.log(filter);
 
-// function lowest(a, b); {
-//     return a - b
-// }
+function lowest(a, b) {
+    return a - b
+}
 
 
 // fetch('../data/data.json')
