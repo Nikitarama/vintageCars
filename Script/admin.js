@@ -1,19 +1,50 @@
-let w = JSON.parse(localStorage.getItem('cars'));
-console.log(w);
+let store = JSON.parse(localStorage.getItem('cars'));
+console.log(store);
 
-Object.keys(w).forEach((wIndex) => {
-    let p = w[wIndex];
-    let m = document.querySelector('tbody');
-    m.innerHTML += `
+Object.keys(store).forEach((storeIndex) => {
+    let product = store[storeIndex];
+    let tbody = document.querySelector('tbody');
+    tbody.innerHTML += `
         <tr>
-            <td>${p.name}</td>
-            <td>${p.year}</td>
-            <td>${p.price}</td>
-            <td><button class="addToCart" onclick="">Delete</button></td>
+            <td>${product.name}</td>
+            <td>${product.year}</td>
+            <td>${product.price}</td>
+            <td><button id="${product.id}" class="delBtn">Delete</button></td>
         </tr>
     `
 
 })
+
+let deleteBtn = [...document.querySelectorAll('.delBtn')];
+
+Object.keys(deleteBtn).forEach((i) => {
+    deleteBtn[i].addEventListener('click', (e) => {
+        console.log(store[i]);
+        let index = i;
+
+if(deleteBtn[i].id == store[i].id){
+    console.log('found');
+    store.splice(index,1);
+    localStorage.setItem('cars', JSON.stringify(store));
+    location.reload()
+} else{
+    console.log('not found')
+}
+    })
+})
+
+
+
+
+// let delete = document.querySelectorAll('delBtn') {
+//         if (alert('You are about to delete an item.')) {
+//             row = td.tbody.tbody;
+//             document.getElementById("adminList").deleteRow(row.rowIndex);
+//             resetForm();
+//         }
+//     }
+
+// onDelete();
 
 
 // var selectedRow = null

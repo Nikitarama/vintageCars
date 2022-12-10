@@ -88,18 +88,72 @@ Object.keys(addBtn).forEach((item) => {
             console.log('clicked', addBtn[item])
             console.log(allCars[item])
             checkout.push(allCars[item]);
-            alert('added to cart');
+            alert('Added to cart');
             console.log(checkout)
             localStorage.setItem('myCheckout', JSON.stringify(checkout));
         })
     }
 )
 
-let lowest = JSON.parse(localStorage.getItem('cars'));
+function sorts() {
+    document.querySelector('myCars').innerHTML = ``
+    let sorter = products.sort((a, b) => (a.product > b.product) ? 1 : -1);
+    localStorage.setItem('myCheckout',JSON.stringify(products))
+    console.log(sorter);
+    displayProducts();
+}
 
-let display = lowest.filter(car => car.price > 15000000);
+// let filter = document.querySelector('#filter');
 
-console.log(display);
+// function lowest() {
+//     Object.keys(filter).forEach((item) => {
+//         filter[item].addEventListener('click',(e) =>{
+//             let filtered = cars.filter((data) => {
+//                 if (data.price == filter[item].innerHTML){
+//                     return data.price >= data.price}})
+//                     console.log(filtered)
+//                     for(let i = 0; i < filter.length; i++) {
+//                     myCars.innerHTML += 
+//                     `
+//                     <div class="col-md-4">
+//                         <div class="card" style="width: 18rem;">
+//                             <img src=${item.image} class="card-img-top" alt="...">
+//                                 <div class="card-body">
+//                                     <p class="carName">${data[item].name}</p>
+//                                     <p class="carPrice">${item.price}</p>
+//                                     <button class="addToCart" href="#">Purchase</button>
+//                                 </div>
+//                         </div>
+//                     </div>
+                    
+//                 `
+//     });
+
+//     lowest();
+        // console.log(allCars[carKey].item);
+        
+        // let display = lowest.filter(car => car.price > 15000000);
+        //         if(data[item] && data[item].price >= 10000000 ) {
+        //                 myCar.innerHTML +=
+        //                 `
+        //                     <div class="col-md-4">
+        //                         <div class="card" style="width: 18rem;">
+        //                             <img src=${item.image} class="card-img-top" alt="...">
+        //                                 <div class="card-body">
+        //                                     <p class="carName">${data[item].name}</p>
+        //                                     <p class="carPrice">${item.price}</p>
+        //                                     <button class="addToCart" href="#">Purchase</button>
+        //                                 </div>
+        //                         </div>
+        //                     </div>
+                                       
+                                
+        //                 `
+        //             }
+
+//                 }
+
+// console.log(display);
 
 // function lowest()
 // Object.keys(allCars).forEach((carKey) => {
