@@ -6,16 +6,17 @@ Object.keys(store).forEach((storeIndex) => {
     let tbody = document.querySelector('tbody');
     tbody.innerHTML += `
         <tr>
+            <td>${parseInt([storeIndex]) + 1}</td>
             <td>${product.name}</td>
             <td>${product.year}</td>
-            <td>${product.price}</td>
-            <td><button id="${product.id}" class="delBtn">Delete</button></td>
+            <td>R${product.price}</td>
+            <td><button id="${product.id}" class="btn btn-danger">Delete</button></td>
         </tr>
     `
 
 })
 
-let deleteBtn = [...document.querySelectorAll('.delBtn')];
+let deleteBtn = [...document.querySelectorAll('.btn-danger')];
 
 Object.keys(deleteBtn).forEach((i) => {
     deleteBtn[i].addEventListener('click', (e) => {

@@ -13,7 +13,7 @@ Object.keys(checkout).forEach((item) => {
     <td><img src='${checkout[item].image}' style='width: 200px; height: '250px''></td>
     <td>${checkout[item].name}</td>
     <td>${checkout[item].year}</td>
-    <td>${checkout[item].price}</td>
+    <td>R${checkout[item].price}</td>
     <td>${checkout[item].quatity}</td>
    
     </tr>

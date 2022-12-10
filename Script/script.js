@@ -2,57 +2,68 @@ localStorage.setItem('cars', JSON.stringify([
     {   "id": 1,
         "name": "Aston Martin DB5",
         "year": "1964", 
-        "price": 70000000,
+        "price": 50000000,
         "type": "vintage",
         "image": "https://i.postimg.cc/KYFwCXcq/Aston-Martin-DB5-1964-old-luxe-digital-2x-jpg.webp",
-        "quatity": 0
+        "quatity": 1
     },
     {
         "id": 2,
-        "name":"Chevrolet El Camino SS 250 GTO",
-        "year": "1970", 
+        "name":"Chevrolet El Camino SS",
+        "year": "1973", 
         "price": 2000000,
         "type": "vintage",
         "image": "https://i.postimg.cc/wv0yMj1P/Chevrolet-El-Camino-SS-1970-old-luxe-digital-2x.jpg",
-        "quatity": 0
+        "quatity": 1
     },
     {
         "id": 3,
         "name": "Ferrari 250 GTO",
         "year":"1962", 
-        "price": 14000000,
+        "price": 70000000,
         "type": "vintage",
         "image": "https://i.postimg.cc/JrZWL2fN/Ferrari-250-GTO-1962-old-luxe-digital-2x-jpg.webp",
-        "quatity": 0
+        "quatity": 1
     },
     {
         "id": 4,
         "name": "Oldsmobile Starfire Convertible",
-        "year": "1962", 
+        "year": "1964", 
         "price": 12000000,
         "type": "vintage",
         "image": "https://i.postimg.cc/SxgcjdHV/Oldsmobile-Starfire-Convertible-1962-old-luxe-digital-2x-jpg.webp",
-        "quatity": 0
+        "quatity": 1
     },
     {
         "id": 5,
-        "name": "Mercedes Benz Gullwing",
-        "year": "1970", 
+        "name": "Mercedes Benz 300 SL Gullwing",
+        "year": "1953", 
         "price": 17000000,
         "type": "vintage",
         "image": "https://i.postimg.cc/pX4HxMLB/merc-gullwing.jpg",
-        "quatity": 0
+        "quatity": 1
     },
     {
         "id": 6,
-        "name": "Rolls Royce",
-        "year": "1960", 
+        "name": "Rolls Royce Phantom",
+        "year": "1938", 
         "price": 20000000,
         "type": "vintage",
         "image": "https://i.postimg.cc/2yL07MNz/greatgasby-car.jpg",
-        "quatity": 0
+        "quatity": 1
     }
 ]));
+
+function test() {
+    
+    try {
+        console.log('Running!');
+    } catch(error){
+        console.log("Not running!")
+    }
+};
+
+test();
 
 let checkout = [];
 localStorage.setItem('myCheckout', JSON.stringify(checkout))
@@ -61,17 +72,17 @@ let allCars = JSON.parse(localStorage.getItem('cars'));
 
 Object.keys(allCars).forEach((carKey) => {
 //show names of cars in console
-    let w = allCars[carKey];
+    let product = allCars[carKey];
     let myCar = document.querySelector("#myCars");
     console.log(allCars[carKey].type);
     myCar.innerHTML +=
                 `
                     <div class="col-md-4">
                         <div class="card" style="width: 18rem;">
-                            <img src=${w.image} class="card-img-top" alt="...">
+                            <img src=${product.image} class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <p class="carName">${w.name}</p>
-                                    <p class="carPrice">${w.price}</p>
+                                    <p class="carName">${product.name}</p>
+                                    <p class="carPrice">R${product.price}</p>
                                     <button class="addToCart" href="#">Purchase</button>
                                 </div>
                         </div>
@@ -95,23 +106,31 @@ Object.keys(addBtn).forEach((item) => {
     }
 )
 
-function sorts() {
-    document.querySelector('myCars').innerHTML = ``
-    let sorter = products.sort((a, b) => (a.product > b.product) ? 1 : -1);
-    localStorage.setItem('myCheckout',JSON.stringify(products))
-    console.log(sorter);
-    displayProducts();
-}
+
+
+
+// let myCar = document.getElementById('#myCars');
+// let sort = sort.item((a, b) => (a.item > b.item) ? 1 : -1);
+
+// Object.keys(sort).forEach((item) => 
+//         sort[item].addEventListener('click', (e) => 
+// {
+//     document.querySelector('myCar').innerHTML += 
+
+//     localStorage.setItem('myCars',JSON.stringify(product))
+//     console.log("lowest");
+//     lowest();
+// })
 
 // let filter = document.querySelector('#filter');
 
-// function lowest() {
-//     Object.keys(filter).forEach((item) => {
-//         filter[item].addEventListener('click',(e) =>{
-//             let filtered = cars.filter((data) => {
-//                 if (data.price == filter[item].innerHTML){
-//                     return data.price >= data.price}})
-//                     console.log(filtered)
+// function lowest(price) {
+//     Object.keys(data).forEach((item) => {
+//         data[item].addEventListener('click',(e) => {
+//             let filter = data.filter((item) => {
+//                 if (item.price == filter[item].innerHTML){
+//                     return item.price == item.price}})
+//                     console.log(filter)
 //                     for(let i = 0; i < filter.length; i++) {
 //                     myCars.innerHTML += 
 //                     `
@@ -119,15 +138,18 @@ function sorts() {
 //                         <div class="card" style="width: 18rem;">
 //                             <img src=${item.image} class="card-img-top" alt="...">
 //                                 <div class="card-body">
-//                                     <p class="carName">${data[item].name}</p>
+//                                     <p class="carName">${item.name}</p>
 //                                     <p class="carPrice">${item.price}</p>
-//                                     <button class="addToCart" href="#">Purchase</button>
+//                                     <button class="addToCart">Purchase</button>
 //                                 </div>
 //                         </div>
 //                     </div>
                     
 //                 `
+//              }
 //     });
+
+//     lowest();
 
 //     lowest();
         // console.log(allCars[carKey].item);
