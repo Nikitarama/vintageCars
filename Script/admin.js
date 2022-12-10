@@ -34,7 +34,16 @@ if(deleteBtn[i].id == store[i].id){
     })
 })
 
-
+function test() {
+    
+    try {
+        console.log('Running!');
+    } catch(error){
+        console.log("Not running!")
+    }
+  };
+  
+  test();
 
 
 // let delete = document.querySelectorAll('delBtn') {

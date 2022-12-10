@@ -21,6 +21,17 @@ Object.keys(checkout).forEach((item) => {
   }
 })
 
+function test() {
+    
+  try {
+      console.log('Running!');
+  } catch(error){
+      console.log("Not running!")
+  }
+};
+
+test();
+
 // fetch("../data/data.json")
 // .then ((store) => {
 //     return store.json()
