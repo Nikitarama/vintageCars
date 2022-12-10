@@ -88,28 +88,55 @@ body {
 }
 
 @media screen and (max-width: 300px){
-    .body {
-        scale:0.1;
+    header, .navbar {
+        scale:0.5;
+        width: 70rem;
+        margin-bottom: 8rem;
+        margin-top: -12rem;
+        margin-left: -17rem;
     }
-    .checkout-head {
-        margin-top: -10px;
+
+    .navbar {
+        height: 4rem;
+        
+    }
+
+    body {
+        scale:0.5;
+        width: 1rem;
+        margin-top: 20rem; 
+    }
+    head {
+        margin: 0;
     }
 };
 
 @media screen and (max-width: 530px){
-    .body {
-        scale: 0.5;
+    .table {
+        scale:0.9;
+        width: 16rem;
+        margin-bottom: 30rem;
+       
     }
-    .checkout-head {
-        margin-top: -10px;
+    header {
+        scale:0.5;
+        width: 70rem;
+        margin-bottom: 80rem;
+        margin-top: 12rem;
+        margin-left: 17rem;
+    }
+
+    .navbar {
+        height: 40rem;
+        
     }
 };
 
-@media screen and (max-width: 720px){
-    .body {
-        scale:0.8;
+@media screen and (max-width: 720px) {
+    .table {
+        scale:1;
     }
     .checkout-head {
-        margin-top: -10px;
+        margin: 0;
     }
-};
+}

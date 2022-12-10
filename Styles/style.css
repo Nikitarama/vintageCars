@@ -223,3 +223,36 @@ a:hover i {
     
 }
 
+@media screen and (max-width: 300px){
+    .card, .navbar {
+        scale:0.1;
+        width: 30%;
+        height: 20%;
+    }
+    body {
+        background-size: contain;
+        background-position: center;
+        width:max-content;
+    }
+    .checkout-head {
+        margin-top: 10px;
+    }
+};
+
+@media screen and (max-width: 530px){
+    body {
+        width: 300px;
+    }
+    .checkout-head {
+        height: 10%;
+    }
+};
+
+@media screen and (max-width: 720px){
+    .card {
+        scale:0.8;
+    }
+    .checkout-head {
+        margin-top: -10px;
+    }
+};

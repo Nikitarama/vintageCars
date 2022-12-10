@@ -208,3 +208,58 @@ input[type="reset"], input[type="submit"]{
 .form-action input:hover {
     background-color: orange;
 }
+
+@media screen and (max-width: 300px){
+    header, .navbar {
+        scale:0.5;
+        width: 70rem;
+        margin-bottom: 8rem;
+        margin-top: -12rem;
+        margin-left: -17rem;
+        justify-content: center;
+    }
+
+    .navbar {
+        height: 4rem;
+        
+    }
+
+    body {
+        scale:0.5;
+        width: 1rem;
+        margin-top: 20rem; 
+    }
+    head {
+        margin: 0;
+    }
+};
+
+@media screen and (max-width: 530px){
+    .table {
+        scale:0.9;
+        width: 16rem;
+        margin-bottom: 30rem;
+       
+    }
+    header {
+        scale:0.5;
+        width: 70rem;
+        margin-bottom: 80rem;
+        margin-top: 12rem;
+        margin-left: 17rem;
+    }
+
+    .navbar {
+        height: 40rem;
+        
+    }
+};
+
+@media screen and (max-width: 720px) {
+    .table {
+        scale:1;
+    }
+    .checkout-head {
+        margin: 0;
+    }
+}
