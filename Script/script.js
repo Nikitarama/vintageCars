@@ -5,7 +5,7 @@ localStorage.setItem('cars', JSON.stringify([
         "price": 70000000,
         "type": "vintage",
         "image": "https://i.postimg.cc/KYFwCXcq/Aston-Martin-DB5-1964-old-luxe-digital-2x-jpg.webp",
-        "amount": 0
+        "quatity": 0
     },
     {
         "id": 2,
@@ -14,7 +14,7 @@ localStorage.setItem('cars', JSON.stringify([
         "price": 2000000,
         "type": "vintage",
         "image": "https://i.postimg.cc/wv0yMj1P/Chevrolet-El-Camino-SS-1970-old-luxe-digital-2x.jpg",
-        "amount": 0
+        "quatity": 0
     },
     {
         "id": 3,
@@ -23,7 +23,7 @@ localStorage.setItem('cars', JSON.stringify([
         "price": 14000000,
         "type": "vintage",
         "image": "https://i.postimg.cc/JrZWL2fN/Ferrari-250-GTO-1962-old-luxe-digital-2x-jpg.webp",
-        "amount": 0
+        "quatity": 0
     },
     {
         "id": 4,
@@ -32,7 +32,7 @@ localStorage.setItem('cars', JSON.stringify([
         "price": 12000000,
         "type": "vintage",
         "image": "https://i.postimg.cc/SxgcjdHV/Oldsmobile-Starfire-Convertible-1962-old-luxe-digital-2x-jpg.webp",
-        "amount": 0
+        "quatity": 0
     },
     {
         "id": 5,
@@ -41,7 +41,7 @@ localStorage.setItem('cars', JSON.stringify([
         "price": 17000000,
         "type": "vintage",
         "image": "https://i.postimg.cc/pX4HxMLB/merc-gullwing.jpg",
-        "amount": 0
+        "quatity": 0
     },
     {
         "id": 6,
@@ -50,7 +50,7 @@ localStorage.setItem('cars', JSON.stringify([
         "price": 20000000,
         "type": "vintage",
         "image": "https://i.postimg.cc/2yL07MNz/greatgasby-car.jpg",
-        "amount": 0
+        "quatity": 0
     }
 ]));
 
@@ -88,11 +88,18 @@ Object.keys(addBtn).forEach((item) => {
             console.log('clicked', addBtn[item])
             console.log(allCars[item])
             checkout.push(allCars[item]);
+            alert('added to cart');
             console.log(checkout)
             localStorage.setItem('myCheckout', JSON.stringify(checkout));
         })
     }
 )
+
+let lowest = JSON.parse(localStorage.getItem('cars'));
+
+let display = lowest.filter(car => car.price > 15000000);
+
+console.log(display);
 
 // function lowest()
 // Object.keys(allCars).forEach((carKey) => {
@@ -105,9 +112,9 @@ Object.keys(addBtn).forEach((item) => {
 //                                 <div class="card" style="width: 18rem;">
 //                                     <img src=${item.image} class="card-img-top" alt="...">
 //                                         <div class="card-body">
-//                                             <p class="carName">${item.name}</p>
-//                                             <p class="carPrice">${item.price}</p>
-//                                             <button class="addToCart" href="#">Purchase</button>
+                                            // <p class="carName">${data[item].name}</p>
+                                            // <p class="carPrice">${item.price}</p>
+                                            // <button class="addToCart" href="#">Purchase</button>
 //                                         </div>
 //                                 </div>
 //                             </div>

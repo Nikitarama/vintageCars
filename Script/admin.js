@@ -9,7 +9,7 @@ Object.keys(w).forEach((wIndex) => {
             <td>${p.name}</td>
             <td>${p.year}</td>
             <td>${p.price}</td>
-            <td><button class="addToCart" onclick="href="#">Delete</button></td>
+            <td><button class="addToCart" onclick="">Delete</button></td>
         </tr>
     `
 

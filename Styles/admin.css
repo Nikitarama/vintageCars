@@ -193,7 +193,8 @@ input[type="reset"], input[type="submit"]{
 }
 
 .navbar-brand {
-    font-size: 40px;
+    font-size: 5px;
+    font-weight: bold;
     color:#f2ebd9;
     margin-left: 20%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

@@ -14,7 +14,7 @@ Object.keys(checkout).forEach((item) => {
     <td>${checkout[item].name}</td>
     <td>${checkout[item].year}</td>
     <td>${checkout[item].price}</td>
-    <td>${checkout[item].amount}</td>
+    <td>${checkout[item].quatity}</td>
    
     </tr>
     `
